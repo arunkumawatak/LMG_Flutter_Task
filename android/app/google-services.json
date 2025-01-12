@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "895103645961",
+    "project_id": "todo-lmg",
+    "storage_bucket": "todo-lmg.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:895103645961:android:f9f27e164c63ba0c9ebbd8",
+        "android_client_info": {
+          "package_name": "com.example.lmg_flutter_task"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_lUj394jaFIgb04-wBM1lhW6sIHaU8zE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:895103645961:android:4bd905a5147cf88a9ebbd8",
+        "android_client_info": {
+          "package_name": "com.todo.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_lUj394jaFIgb04-wBM1lhW6sIHaU8zE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
