@@ -1,8 +1,9 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:lmg_flutter_task/screens/loginScreen/loginScreen.dart';
-import 'package:lmg_flutter_task/utils/colors.dart';
+import 'package:lmg_flutter_task/screens/Auth/view/loginScreen.dart';
+import 'package:lmg_flutter_task/utils/colorConst.dart';
+import 'package:lmg_flutter_task/utils/stringConst.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,16 +17,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'TODO App',
+      title: StringConst.appName,
       debugShowCheckedModeBanner: false,
       scrollBehavior: const ScrollBehavior().copyWith(overscroll: false),
       theme: ThemeData.from(
-              colorScheme: ColorScheme.light(primary: ColorConst.primaryColor))
+              colorScheme:
+                  const ColorScheme.light(primary: ColorConst.primaryColor))
           .copyWith(
         textTheme: Theme.of(context).textTheme.apply(
-              bodyColor: ColorConst.primaryColor,
-              fontFamily: 'Montserrat',
-            ),
+            bodyColor: ColorConst.primaryColor, fontFamily: 'Montserrat'),
         appBarTheme:
             const AppBarTheme(backgroundColor: ColorConst.backGroundColor),
         scaffoldBackgroundColor: ColorConst.backGroundColor,

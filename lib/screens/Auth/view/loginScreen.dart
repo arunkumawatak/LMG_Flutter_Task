@@ -1,7 +1,7 @@
 import 'dart:math' as math;
 import 'package:flutter/material.dart';
-import 'components/center_widget/centerWidget.dart';
-import 'components/loginContent.dart';
+import 'package:lmg_flutter_task/screens/Auth/view/Components/loginContent.dart';
+import 'Components/CenterWidget/centerWidget.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -11,6 +11,8 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  int screenType = 1; // 1: SignUp, 0: Login
+
   Widget topWidget(double screenWidth) {
     return Transform.rotate(
       angle: -35 * math.pi / 180,
@@ -68,7 +70,14 @@ class _LoginScreenState extends State<LoginScreen> {
             child: bottomWidget(screenSize.width),
           ),
           CenterWidget(size: screenSize),
-          const LoginContent(),
+          Logincontent(
+            screenType: screenType,
+            onScreenTypeChange: (newScreenType) {
+              setState(() {
+                screenType = newScreenType;
+              });
+            },
+          ),
         ],
       ),
     );
