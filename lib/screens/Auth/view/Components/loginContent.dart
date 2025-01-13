@@ -24,6 +24,11 @@ class Logincontent extends StatefulWidget {
 class _LogincontentState extends State<Logincontent> {
   final controller = Get.put(AuthController());
   final formKey = GlobalKey<FormState>();
+  // @override
+  // void dispose() {
+  //   Get.delete<AuthController>();
+  //   super.dispose();
+  // }
 
   void switchScreenType() {
     widget.onScreenTypeChange(widget.screenType == 1 ? 0 : 1);
@@ -104,9 +109,6 @@ class _LogincontentState extends State<Logincontent> {
                                   builder: (context) => HomeScreen()),
                               (Route<dynamic> route) => false,
                             );
-                          } else {
-                            controller.errorMessage.value =
-                                'Registration failed. Try again.';
                           }
                         } else {
                           final user = await controller.loginWithEmail(
@@ -119,9 +121,6 @@ class _LogincontentState extends State<Logincontent> {
                                   builder: (context) => HomeScreen()),
                               (Route<dynamic> route) => false,
                             );
-                          } else {
-                            controller.errorMessage.value =
-                                'Login failed. Please check your credentials.';
                           }
                         }
                       }
